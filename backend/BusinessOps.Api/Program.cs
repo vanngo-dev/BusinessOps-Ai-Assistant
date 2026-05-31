@@ -1,5 +1,6 @@
 using BusinessOps.Api.Data;
 using Microsoft.EntityFrameworkCore;
+using BusinessOps.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+builder.Services.AddScoped<OperationsInsightsService>();
 
 var app = builder.Build();
 

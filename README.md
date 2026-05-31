@@ -87,3 +87,22 @@ PUT /api/support-issues/{id}
 DELETE /api/support-issues/{id}
 
 http://localhost:5074/swagger
+
+## Business Insights API
+
+The backend includes an operations summary endpoint that calculates useful business metrics from the database.
+
+### Operations Summary
+
+```http
+GET /api/insights/operations-summary
+{
+  "totalProducts": 10,
+  "lowStockProducts": 5,
+  "openOrders": 5,
+  "delayedShipments": 3,
+  "ordersMissingTracking": 3,
+  "highPrioritySupportIssues": 4,
+  "unresolvedSupportIssues": 7,
+  "estimatedOpenOrderValue": 9546.25
+}
