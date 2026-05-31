@@ -54,3 +54,36 @@ This project uses Entity Framework Core for relational database access.
 
 ```bash
 dotnet tool install --global dotnet-ef
+
+## Business Data API Endpoints
+
+The backend exposes CRUD endpoints for core business records.
+
+### Products
+
+```http
+GET /api/products
+GET /api/products/{id}
+POST /api/products
+PUT /api/products/{id}
+DELETE /api/products/{id}
+
+GET /api/orders
+GET /api/orders/{id}
+POST /api/orders
+PUT /api/orders/{id}
+DELETE /api/orders/{id}
+
+GET /api/shipments
+GET /api/shipments/{id}
+POST /api/shipments
+PUT /api/shipments/{id}
+DELETE /api/shipments/{id}
+
+GET /api/support-issues
+GET /api/support-issues/{id}
+POST /api/support-issues
+PUT /api/support-issues/{id}
+DELETE /api/support-issues/{id}
+
+http://localhost:5074/swagger
