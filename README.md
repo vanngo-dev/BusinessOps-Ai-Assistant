@@ -37,3 +37,11 @@ In progress.
 ## Project Goal
 
 This portfolio project demonstrates full-stack development, business systems design, API development, database modeling, dashboard UI design, and practical AI application development.
+
+## Running the Backend API
+
+From the project root:
+
+```bash
+cd backend/BusinessOps.Api
+dotnet run
