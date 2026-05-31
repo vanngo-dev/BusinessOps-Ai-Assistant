@@ -1,5 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
+// Swagger services
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -11,7 +12,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Optional for now. Commented out to avoid local HTTPS warning.
+// Local dev: keep HTTPS redirection disabled for now
 // app.UseHttpsRedirection();
 
 app.MapGet("/api/health", () =>
