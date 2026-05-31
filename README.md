@@ -45,3 +45,12 @@ From the project root:
 ```bash
 cd backend/BusinessOps.Api
 dotnet run
+
+## Database Setup
+
+This project uses Entity Framework Core for relational database access.
+
+### Install EF Tool
+
+```bash
+dotnet tool install --global dotnet-ef
