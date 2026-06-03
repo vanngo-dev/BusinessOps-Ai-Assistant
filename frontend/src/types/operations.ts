@@ -8,8 +8,3 @@ export type OperationsSummary = {
   unresolvedSupportIssues: number;
   estimatedOpenOrderValue: number;
 };
-
-export type HealthStatus = {
-  status: string;
-  app: string;
-};

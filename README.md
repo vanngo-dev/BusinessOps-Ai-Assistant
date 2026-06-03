@@ -43,6 +43,7 @@ Completed phases:
 - Phase 4 - CRUD APIs for business data
 - Phase 5 - Business Insights API
 - Phase 6 - React frontend foundation
+- Phase 7 - Operations Dashboard UI
 
 ## Project Goal
 
@@ -170,4 +171,22 @@ Example response:
   "unresolvedSupportIssues": 7,
   "estimatedOpenOrderValue": 9546.25
 }
+```
+
+## Operations Dashboard UI
+
+The frontend dashboard reads the operations summary endpoint and displays:
+
+- Current operations risk
+- Open order value
+- Product and inventory counts
+- Fulfillment risk metrics
+- Support issue metrics
+- Priority queue
+- Risk mix by operating area
+
+The dashboard is currently scoped to:
+
+```http
+GET /api/insights/operations-summary
 ```
