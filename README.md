@@ -10,12 +10,12 @@ Many businesses rely on scattered spreadsheets, manual checks, and disconnected 
 
 ## Tech Stack
 
-- C# / .NET 8 Web API
+- C# / .NET Web API
 - Entity Framework Core
-- PostgreSQL or SQL Server
+- SQL Server
 - React
 - TypeScript
-- Tailwind CSS
+- Vite
 - REST APIs
 - AI assistant service
 
@@ -34,6 +34,16 @@ Many businesses rely on scattered spreadsheets, manual checks, and disconnected 
 
 In progress.
 
+Completed phases:
+
+- Phase 0 - Project setup and documentation structure
+- Phase 1 - .NET Web API foundation
+- Phase 2 - Domain models
+- Phase 3 - EF Core database and seed data
+- Phase 4 - CRUD APIs for business data
+- Phase 5 - Business Insights API
+- Phase 6 - React frontend foundation
+
 ## Project Goal
 
 This portfolio project demonstrates full-stack development, business systems design, API development, database modeling, dashboard UI design, and practical AI application development.
@@ -45,6 +55,43 @@ From the project root:
 ```bash
 cd backend/BusinessOps.Api
 dotnet run
+```
+
+Backend URL:
+
+```text
+http://localhost:5074
+```
+
+Swagger URL:
+
+```text
+http://localhost:5074/swagger
+```
+
+## Running the Frontend
+
+From the project root:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend URL:
+
+```text
+http://localhost:5173
+```
+
+If port `5173` is already in use, Vite may print the next available localhost port.
+
+Frontend environment example:
+
+```bash
+VITE_API_BASE_URL=http://localhost:5074
+```
 
 ## Database Setup
 
@@ -54,6 +101,7 @@ This project uses Entity Framework Core for relational database access.
 
 ```bash
 dotnet tool install --global dotnet-ef
+```
 
 ## Business Data API Endpoints
 
@@ -67,26 +115,37 @@ GET /api/products/{id}
 POST /api/products
 PUT /api/products/{id}
 DELETE /api/products/{id}
+```
 
+### Orders
+
+```http
 GET /api/orders
 GET /api/orders/{id}
 POST /api/orders
 PUT /api/orders/{id}
 DELETE /api/orders/{id}
+```
 
+### Shipments
+
+```http
 GET /api/shipments
 GET /api/shipments/{id}
 POST /api/shipments
 PUT /api/shipments/{id}
 DELETE /api/shipments/{id}
+```
 
+### Support Issues
+
+```http
 GET /api/support-issues
 GET /api/support-issues/{id}
 POST /api/support-issues
 PUT /api/support-issues/{id}
 DELETE /api/support-issues/{id}
-
-http://localhost:5074/swagger
+```
 
 ## Business Insights API
 
@@ -96,6 +155,11 @@ The backend includes an operations summary endpoint that calculates useful busin
 
 ```http
 GET /api/insights/operations-summary
+```
+
+Example response:
+
+```json
 {
   "totalProducts": 10,
   "lowStockProducts": 5,
@@ -106,3 +170,4 @@ GET /api/insights/operations-summary
   "unresolvedSupportIssues": 7,
   "estimatedOpenOrderValue": 9546.25
 }
+```

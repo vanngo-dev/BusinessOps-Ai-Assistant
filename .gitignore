@@ -20,4 +20,4 @@ Thumbs.db
 
 # Logs
 *.log
-docs/youtube
+*.tsbuildinfo
